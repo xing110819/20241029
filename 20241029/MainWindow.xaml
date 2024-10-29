@@ -3,10 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:_20241029"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel LastChildFill="False">
+        <Menu Height="30" DockPanel.Dock="Top">
+            <MenuItem Height="25" Header="檔案" VerticalAlignment="Center">
+                <MenuItem Header="新增畫布"/>
+                <MenuItem Header="開始檔案"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Height="40" DockPanel.Dock="Top">
+            <ToolBar Height="38" Width="400" Background="Chartreuse">
+                <Label Content="筆刷色彩" FontSize="14"
+                  VerticalAlignment="Center"/>
+                <xctk:ColorPicker Width="200"/>
+            </ToolBar>
+        </ToolBarTray>
+    </DockPanel>
 
-    </Grid>
 </Window>
