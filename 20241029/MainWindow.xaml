@@ -17,10 +17,10 @@
         <ToolBarTray Height="40" DockPanel.Dock="Top">
             <ToolBar Height="38" Width="550" Background="Chartreuse">
                 <Label Content="筆刷色彩" FontSize="14" VerticalContentAlignment="Center" FontWeight="Bold"/>
-                <xctk:ColorPicker x:Name="strokeColorPicker" Width="100" SelectedColorChanged="strokeColorPicker_SelectedColorChanged"/>
+                <xctk:ColorPicker x:Name="strokeColorPicker" Width="100" SelectedColorChanged="StrokeColorPicker_SelectedColorChanged"/>
                 <Label Content="填滿色彩" FontSize="14" VerticalContentAlignment="Center" FontWeight="Bold"/>
-                <xctk:ColorPicker x:Name="fillColorPicker" Width="100" SelectedColorChanged="fillColorPicker_SelectedColorChanged"/>
-                <Slider x:Name="strokeThicknessSlider" Width="120" VerticalAlignment="Center" Value="1" Minimum="1" IsSnapToTickEnabled="True" Margin="20,0,0,0" ValueChanged="strokeThicknessSlider_ValueChanged" />
+                <xctk:ColorPicker x:Name="fillColorPicker" Width="100" SelectedColorChanged="FillColorPicker_SelectedColorChanged"/>
+                <Slider x:Name="strokeThicknessSlider" Width="120" VerticalAlignment="Center" Value="1" Minimum="1" IsSnapToTickEnabled="True" Margin="20,0,0,0" ValueChanged="StrokeThicknessSlider_ValueChanged" />
                 <Label Width="40" Margin="10,0,0,0" Content="{Binding Value, ElementName=strokeThicknessSlider}" FontSize="14" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
             </ToolBar>
             <ToolBar Height="38" Width="300" Background="#FFCAE0F9">
@@ -37,15 +37,15 @@
                     <Image Height="35" Width="35" Source="/polyline.png"/>
                 </RadioButton>
                 <Separator/>
-                <RadioButton Width="38" Height="38" Click="EraseButton_Click" Tag="erase">
+                <Button Width="38" Height="38" Click="EraseButton_Click" Tag="erase">
                     <Image Height="35" Width="35" Source="/eraser.png"/>
-                </RadioButton>
-                <RadioButton Width="38" Height="38" Click="ClearButton_Click" Tag="clear">
+                </Button>
+                <Button Width="38" Height="38" Click="ClearButton_Click" Tag="clear">
                     <Image Height="35" Width="35" Source="/trashcan.png"/>
-                </RadioButton>
+                </Button>
             </ToolBar>
         </ToolBarTray>
-        <Canvas x:Name="myCanvas" Background="#FFF5F6D7" DockPanel.Dock="Top" Height="394" MouseEnter="myCanvas_MouseEnter" MouseLeftButtonDown="myCanvas_MouseLeftButtonDown" MouseMove="myCanvas_MouseMove" MouseLeftButtonUp="myCanvas_MouseLeftButtonUp"/>
+        <Canvas x:Name="myCanvas" Background="#FFF5F6D7" DockPanel.Dock="Top" Height="394" MouseEnter="MyCanvas_MouseEnter" MouseLeftButtonDown="MyCanvas_MouseLeftButtonDown" MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp"/>
         <StatusBar Height="35" DockPanel.Dock="Bottom" Background="LightGray">
             <StatusBarItem>
                 <Label x:Name="statusLabel" Content="Ready" FontSize="14"/>
