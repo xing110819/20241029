@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        xmlns:local="clr-namespace:_20241029" 
+        xmlns:local="clr-namespace:_20241029"
         mc:Ignorable="d"
         Title="WPF小畫家ver2" Height="525" Width="935">
     <DockPanel LastChildFill="False">
